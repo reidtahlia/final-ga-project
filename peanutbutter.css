@@ -1,0 +1,443 @@
+body {
+    margin: 0 auto;
+    /* max-width: 1200px; */
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: .05em;
+}
+
+h1 {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 26px;
+    letter-spacing: 0.05rem;
+}
+
+h3 {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 12px;
+}
+
+button {
+    font-family: "neue-haas-grotesk-display", sans-serif;;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: .05em;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.hide {
+    display: none;
+}
+
+/* NAVIGATION */
+
+.logo-img {
+    width: 120px;
+    padding-left: 5px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.burger-button {
+    display: flex;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+.nav-links, .nav-buttons {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .burger-button {
+        display: none;
+    }
+
+    .button-right {
+        padding-left: 20px;
+    }
+    
+    .nav-links, .nav-buttons {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #000;
+        padding: 0 10px;
+    }
+
+    .cart-button {
+        padding: 8px 30px;
+        border-radius: 32px;
+        border: 1px solid transparent;
+    }
+        
+    .profile-button {
+        width: 32px;
+        height: 32px;
+        border-radius: 70%;
+        border: 1px solid transparent;
+    }
+}
+
+/* HERO  */
+
+.pb-main-photo {
+    background-image: url(./assets/peanut-butteer-spoon.jpeg);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+}
+
+@media (min-width: 768px) {
+    .pb-main-photo {
+        background-image: url(./assets/pb-bagels.jpg);
+    }
+}
+
+.pb-intro-content {
+    color: white;
+    text-align: center;
+    width: 80vw;
+    position: absolute;
+}
+
+.pb-main-button {
+    color: #000;
+    padding: 8px 30px;
+    border-radius: 32px;
+    background-color: #E8E6E0;
+    border: 1px solid transparent;
+}
+
+.image-mask-darken {
+    position: relative;
+}
+
+.image-mask-darken:before  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+    content: "";
+}
+
+/* QUIZ SECTION */
+
+.pb-quiz-section {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pb-quiz-intro {
+    margin-bottom: 40px;
+}
+
+.pb-quiz img {
+    width: 200px;
+}
+
+.pb-quiz-title {
+    font-family: "nimbus-sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media (min-width: 768px) {
+    .pb-quiz {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 40px;
+    }
+    .smooth, .crunchy {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* POEM SECTION */
+
+.pb-poem-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background-color: #E8E6E0;
+}
+
+.pb-poem-inner {
+    padding: 0 50px;
+}
+
+.pb-poem-title {
+    border-bottom: 1px solid #000;
+    padding-bottom: 15px;
+}
+
+.pb-poem-content {
+    font-family: "ivypresto-display", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.pb-secondary-button {
+    color: #000;
+    padding: 8px 30px;
+    border-radius: 32px;
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+/* RECIPES SECTION */
+
+.pb-recipes-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.pb-recipe-left {
+    width: 150px;
+    height: 150px;
+    background-image: url(./assets/Rainbow-Noodle-Salad-with-Peanut-Dressing.jpeg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.pb-recipe-right {
+    width: 150px;
+    height: 150px;
+    background-image: url(./assets/5-Ingredient-Protein-Bars-Peanut-Butter.jpeg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.pb-recipes-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+    gap: 20px;
+}
+
+.pb-recipe-indiv-title {
+    color: white;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .pb-recipe-left {
+        width: 400px;
+        height: 400px;
+    }
+
+    .pb-recipe-right {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* IMAGE CSS / TO FIT. */
+/* .grid-city {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  } */
+
+/* MERCH SECTION */
+
+.pb-merch-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.pb-merch-images {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .pb-merch-images {
+        width: 400px;
+    }
+}
+
+/* FOOTER SECTION */
+
+.pb-footer {
+    background-color: #E8E6E0;
+    padding: 40px;
+}
+
+.footer-xs-title {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+}
+
+.pb-copyright {
+    color: #A1A1A1;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding-top: 20px;
+}
+
+/* MODAL SECTION */
+@media (min-width: 768px) {
+    .pb-modal-container {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .pb-modal-content {
+        background-color: #E8E6E0;
+        width: 600px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        position: relative;
+    }
+    
+    .pb-modal-left {
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .pb-modal-content img {
+        width: 100%;
+    }
+
+    .pb-modal-signup-form {
+        padding: 15px;
+    }
+    
+    .pb-modal-signup-form input {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .modal-close-btn {
+        font-size: 18px;
+        text-decoration: none;
+        background-color: #000;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+ /* SUCCESS MODAL */
+
+@media (min-width: 768px) {
+    .success-modal-container {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .success-modal-content {
+        background-color: #E8E6E0;
+        padding: 80px 160px;
+    }
+    .success-modal-content .pb-secondary-button {
+        margin-top: 20px;
+    }
+    .success-modal-container {
+        display: none;
+    }
+}
+
+ /* MOBILE MODAL */
+
+/* .pb-modal-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.pb-modal-content {
+    background-color: #E8E6E0;
+    width: 300px;
+    text-align: center;
+    padding: 30px;
+}
+
+.pb-modal-content img {
+    width: 100%;
+}
+
