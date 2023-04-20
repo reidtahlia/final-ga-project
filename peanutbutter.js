@@ -5,9 +5,12 @@ const nlFormSubmitBtn = document.querySelector("#pb-modal-submit");
 const nlCloseBtn = document.querySelector("#modal-close-btn");
 const nlSuccessModal = document.querySelector("#success-modal");
 const nlSuccessCloseBtn = document.querySelector("#success-modal-closebtn");
-
-const menuOne = document.querySelector("#menu-1");
-const menuOneBtn = document.querySelector("#menu-1-button");
+const pbQuizSmoothJar = document.querySelector('.pb-jar-smooth');
+const pbQuizSmoothPersonality = document.querySelector('.pb-quiz-personality-smooth');
+const pbQuizCrunchyJar = document.querySelector('.pb-jar-crunchy');
+const pbQuizCrunchyPersonality = document.querySelector('.pb-quiz-personality-crunchy');
+const burgerBtn = document.querySelector('#burger-button');
+const mainNav = document.querySelector('#main-nav');
 
 function nlSignUp(event) {
   event.preventDefault();
@@ -35,7 +38,7 @@ function nlSuccessShow() {
   localStorage.setItem("nlSignUpSuccess", "true");
 }
 
-// gets key value from localStorage
+// gets key value from localStorage. Conditional statements to determine signup success or no
 const nlInfo = localStorage.getItem("nlSignUpSuccess");
 // console.log(nlInfo);
 // checks if info/localStorage item exists/is false
@@ -47,31 +50,27 @@ if (!nlInfo || nlInfo === "false") {
   }, 2000);
 }
 
-
-// function quizCardFlip() {
-//   for (let i=0; i < quizItems.length; i++ ) {
-//       const quizItem = quizItems[i];
-//       quizItem.addEventListener('click', () => {
-//       console.log(quizItem);
-//       quizItem.style.transform = "rotateY(180deg)";
-//         })
-//     }
-// }
- 
-const quizItems = document.querySelectorAll('.pb-jars');
-for (let i=0; i < quizItems.length; i++ ) {
-  const quizItem = quizItems[i];
-  quizItem.addEventListener('click', (event) => {
-    console.log(event);
-    quizItem.style.transform = "rotateY(180deg)";
-  })
-}
-
-
 // EVENT LISTENERS
 nlForm.addEventListener("submit", nlSignUp);
 nlCloseBtn.addEventListener("click", nlClose);
 nlSuccessCloseBtn.addEventListener("click", nlSuccessClose);
 
-// menuOneBtn.addEventListener("mouseover", menuOneShow);
-// menuOne.addEventListener("mouseleave", menuHide);
+// QUIZ FLIPSSSS
+// get array of card elements
+const cards = document.querySelectorAll(".flip-card-inner");
+// console.log(cards)
+
+// loop over array and toggle .rotate class on element
+for (let i = 0; i < cards.length; i++) {
+  const card = cards[i];
+  // console.log(card)
+  card.addEventListener("click", () => card.classList.toggle("rotate"));
+}
+
+// SIDE MENU
+
+(function() {
+  burgerBtn.addEventListener('click', function () {
+    mainNav.classList.toggle('menu-open')
+  })
+}()) 

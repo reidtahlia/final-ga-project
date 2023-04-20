@@ -31,6 +31,10 @@ button {
     letter-spacing: .05em;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
     color: #000;
@@ -45,6 +49,10 @@ ul {
     display: none;
 }
 
+.show {
+    display: block;
+}
+
 /* NAVIGATION */
 
 .logo-img {
@@ -56,7 +64,6 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
 }
 
 .burger-button {
@@ -65,8 +72,28 @@ ul {
     border: 1px solid transparent;
 }
 
-.nav-links, .nav-buttons {
+.nav-buttons {
     display: none;
+}
+
+.nav-links {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 1;
+    background: #E8E6E0;
+    font-size: 20px;
+    display: none;
+}
+
+.menu-open .nav-links {
+    display: flex;
 }
 
 @media (min-width: 768px) {
@@ -80,7 +107,11 @@ ul {
     
     .nav-links, .nav-buttons {
         display: flex;
+        flex-direction: row;
         align-items: center;
+        position: static;
+        background-color: transparent;
+        font-size: 14px;
     }
 
     .nav-links a {
@@ -153,40 +184,108 @@ ul {
 /* QUIZ SECTION */
 
 .pb-quiz-section {
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-}
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    
+    .pb-quiz img {
+        width: 250px;
+        padding: 0px;
+    }
+    
+    .pb-quiz-title {
+        font-family: "nimbus-sans", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+    }
+    
+    .pb-personality-title {
+        font-family: "ivypresto-display", serif;
+        font-weight: 100;
+        font-style: normal;
+        font-size: 24px;
+        padding-left: 30px; 
+        text-align: left;
+        /* ^^could add this to the div section */
+    }
+    
+    .pb-personality-italic {
+        font-family: "ivypresto-display", serif;
+        font-weight: 100;
+        font-style: italic;
+        text-align: left;
+    }
+    
+    
+    .pb-personality-facts li {
+        list-style-type: none;
+        padding-left: 30px;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: left;
+    } 
 
-.pb-quiz-intro {
-    margin-bottom: 40px;
-}
+    .pb-quiz {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    /* 
+        Adapated from https://www.w3schools.com/howto/howto_css_flip_card.asp
+    */
+    
+    .item {
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+    }
+    
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    
+    
+    /* Position the front and back side */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+    
+    /* Style the back side */
+    .flip-card-back {
+      background-color: #E26A37;
+      color: white;
+      transform: rotateY(180deg);
+    }
+    
+    .rotate {
+        transform: rotateY(180deg)
+    }
 
-.pb-quiz img {
-    width: 200px;
-}
-
-.pb-quiz-title {
-    font-family: "nimbus-sans", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    font-style: normal;
-}
 
 @media (min-width: 768px) {
     .pb-quiz {
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding: 10px 40px;
-    }
-    .smooth, .crunchy {
-        display: flex;
-        flex-direction: column;
+        gap: 20px;
     }
 }
+
 
 /* POEM SECTION */
 
@@ -275,18 +374,6 @@ ul {
     }
 }
 
-/* IMAGE CSS / TO FIT. */
-/* .grid-city {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-  }
-
-  img {
-    width: 100%;
-    display: block;
-  } */
-
 /* MERCH SECTION */
 
 .pb-merch-section {
@@ -327,7 +414,12 @@ ul {
 }
 
 /* MODAL SECTION */
-@media (min-width: 768px) {
+
+/* .pb-modal-container {
+    display: none;
+}
+
+@media (min-width: 768px) { */
     .pb-modal-container {
         width: 100%;
         height: 100%;
@@ -335,10 +427,10 @@ ul {
         top: 0;
         left: 0;
         z-index: 1;
-        display: none;
         align-items: center;
         justify-content: center;
         background: rgba(0, 0, 0, 0.5);
+        display: none;
     }
     
     .pb-modal-content {
@@ -376,6 +468,7 @@ ul {
         text-decoration: none;
         background-color: #000;
         color: #fff;
+        border: none;
         width: 40px;
         height: 40px;
         display: flex;
@@ -385,11 +478,14 @@ ul {
         top: 0;
         right: 0;
     }
-}
 
  /* SUCCESS MODAL */
 
-@media (min-width: 768px) {
+/* .success-modal-container {
+    display: none;
+}  */
+
+/* @media (min-width: 768px) { */
     .success-modal-container {
         width: 100%;
         height: 100%;
@@ -405,7 +501,7 @@ ul {
     }
     .success-modal-content {
         background-color: #E8E6E0;
-        padding: 80px 160px;
+        padding: 30px 96px;
     }
     .success-modal-content .pb-secondary-button {
         margin-top: 20px;
@@ -413,9 +509,9 @@ ul {
     .success-modal-container {
         display: none;
     }
-}
+/* } */
 
- /* MOBILE MODAL */
+ /* MOBILE MODAL. DIDN'T USE IN FINAL PRESENTATION */
 
 /* .pb-modal-container {
     width: 100%;

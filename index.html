@@ -13,7 +13,7 @@
 <body>
   <header>
     
-      <nav class="main-nav">
+      <nav class="main-nav" id="main-nav">
 
         <div class="nav-left">
           <a href="#" class="logo-link">
@@ -42,7 +42,7 @@
           </div>
         </div>
         
-      <button class="burger-button">
+      <button class="burger-button" id="burger-button">
         <svg viewBox="0 0 100 80" width="30" height="30">
           <rect width="100" height="10"></rect>
           <rect y="30" width="100" height="10"></rect>
@@ -56,6 +56,10 @@
       <button class="pb-main-button">The Shop</button>
     </div>
   </section>
+
+  <aside class="side-menu-position" id="side-menu">
+    
+  </aside>
 
   <!-- DROPDOWN MENU
   <aside class="pb-dropdown-menu" id="pb-shop-menu">
@@ -72,18 +76,52 @@
   </aside> -->
     
   <!--QUIZ SECTION-->
-  <!--v2 SECTION-->
   <section class="pb-quiz-section">
     <h1 class="pb-quiz-intro">But first, which one are you?</h1>
     <div class="pb-quiz">
-      <div class="pb-quiz smooth">
-        <img src="./assets/PB Jar Mockup/pb-jar-smooth.png" class="pb-jars smooth">
-        <p class="pb-quiz-title">Type: Smooth</p>
+      <div class="pb-quiz-smooth item">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./assets/PB Jar Mockup/pb-jar-smooth.png" class="pb-type smooth">
+            <p class="pb-quiz-title">Smooth</p>
+          </div>
+          <div class="flip-card-back">
+              <h1 class="pb-personality-title"><span class="pb-personality-italic">Smooth </span> Peanut Butter Eaters Are:</h1>
+            <ul class="pb-personality-facts smooth">
+              <li>More introverted</li>
+              <li>More risk-averse</li>
+              <li>More likely to avoid confrontation</li>
+              <li>More likely to arrive to work early</li>
+              <li>More likely to stay in on a Saturday night</li>
+              <li>More likely to be dissatisfied in relationship</li>
+              <li>Stressed out more easily</li>
+              <li>Fans of The Big Bang Theory</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="pb-quiz crunchy">
-        <img src="./assets/PB Jar Mockup/pb-jar-crunchy-new.png" class="pb-jars crunchy">
-        <p class="pb-quiz-title">Type: Crunchy</p>
+      <div class="pb-quiz-crunchy item">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./assets/PB Jar Mockup/pb-jar-crunchy-new.png" class="pb-type smooth">
+            <p class="pb-quiz-title">Crunchy</p>
+          </div>
+          <div class="flip-card-back">
+            <h1 class="pb-personality-title"><span class="pb-personality-italic">Crunchy </span>Peanut Butter Eaters Are:</h1>
+            <ul class="pb-personality-facts crunchy">
+              <li>More extroverted</li>
+              <li>Bigger risk-takers</li>
+              <li>More likely to attract confrontation</li>
+              <li>More likely to arrive to work late</li>
+              <li>More likely to go out on a Saturday night</li>
+              <li>More satisfied in love life	</li>
+              <li>More goal oriented</li>
+              <li>Fans of Game of Thrones</li>
+            </ul>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
