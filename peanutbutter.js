@@ -16,7 +16,7 @@ function nlSignUp(event) {
   event.preventDefault();
   const inputName = document.querySelector("#name");
   const inputEmail = document.querySelector("#email");
-  // console.log(inputEmail.value);
+  // console.log(inputEmail.value);   
   nlSuccessShow();
 }
 
