@@ -134,6 +134,25 @@ ul {
     }
 }
 
+/*  DROPDOWN MENU - NEED TO FINISH  */
+
+/* .pb-dropdown-menu {
+    display: none;
+} */
+
+/* @media (min-width: 768px) { */
+/* .pb-dropdown-menu { */
+    /* background-color: pink; */
+    /* box-shadow: 0 0 2rem rgba(0,0,0,.1); creates a border */
+    /* padding: 15px; */
+    /* position: absolute; pops element up in the dom */
+    /* top: 60px; just visually aligned this */
+    /* left: 445px; */
+    /* width: 250px; */
+    /* z-index: 10; how much popping up does it go? I use multiples of 10 */
+  /* }
+} */
+
 /* HERO  */
 
 .pb-main-photo {
@@ -325,11 +344,24 @@ ul {
 /* RECIPES SECTION */
 
 .pb-recipes-section {
+    align-items: center;
     text-align: center;
     padding: 20px;
 }
 
+.pb-recipes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+    gap: 20px;
+}
+
+
 .pb-recipe-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 150px;
     height: 150px;
     background-image: url(./assets/Rainbow-Noodle-Salad-with-Peanut-Dressing.jpeg);
@@ -338,19 +370,14 @@ ul {
 }
 
 .pb-recipe-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 150px;
     height: 150px;
     background-image: url(./assets/5-Ingredient-Protein-Bars-Peanut-Butter.jpeg);
     background-position: center center;
     background-size: cover;
-}
-
-.pb-recipes-grid {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 60px;
-    gap: 20px;
 }
 
 .pb-recipe-indiv-title {
@@ -359,7 +386,7 @@ ul {
     font-weight: 700;
     font-style: normal;
     font-size: 18px;
-    justify-content: center;
+
 }
 
 @media (min-width: 768px) {
